@@ -1,12 +1,11 @@
-import type { ComponentPluginOptions } from '@mdit-vue/plugin-component'
-import type { FrontmatterPluginOptions } from '@mdit-vue/plugin-frontmatter'
-import type { MarkdownItEnv } from '@mdit-vue/types'
+import type { ComponentPluginOptions } from '@mdit-vue-for-enhancer/plugin-component'
+import type { FrontmatterPluginOptions } from '@mdit-vue-for-enhancer/plugin-frontmatter'
 import type {
-  MarkdownItAsync,
-  MarkdownItAsyncOptions,
-  PluginSimple as MarkdownItPluginSimple,
-  PluginWithOptions as MarkdownItPluginWithOptions,
-} from 'markdown-it-async'
+  MarkdownIt,
+  MarkdownItEnv,
+  MarkdownItOptions,
+  MarkdownItPlugin,
+} from 'markdown-it-enhancer'
 import type { FilterPattern } from 'unplugin-utils'
 import type { preprocessHead } from './core/head'
 
@@ -152,22 +151,21 @@ export interface Options {
   /**
    * Options passed to Markdown It
    */
-  markdownItOptions?: MarkdownItAsyncOptions
+  markdownItOptions?: MarkdownItOptions
 
   /**
    * Plugins for Markdown It
    */
   markdownItUses?: (
-    | MarkdownItPluginSimple
-    | [MarkdownItPluginSimple | MarkdownItPluginWithOptions<any>, any]
-    | any
+    | MarkdownItPlugin
+    | [MarkdownItPlugin<any>, any]
   )[]
 
   /**
    * A function providing the Markdown It instance gets the ability to apply custom
    * settings/plugins
    */
-  markdownItSetup?: (MarkdownIt: MarkdownItAsync) => void | Promise<void>
+  markdownItSetup?: (MarkdownIt: MarkdownIt) => void | Promise<void>
 
   /**
    * Wrap the rendered html in a div

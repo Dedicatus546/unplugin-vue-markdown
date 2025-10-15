@@ -15,7 +15,7 @@
     "@babel/core": "^7.28.4",
     "@vue/cli-plugin-babel": "~5.0.9",
     "@vue/cli-service": "~5.0.9",
-    "unplugin-vue-markdown": "workspace:*"
+    "unplugin-vue-markdown-for-enhancer": "workspace:*"
   },
   "browserslist": [
     "> 1%",

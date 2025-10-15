@@ -1,8 +1,8 @@
 import type { TransformResult } from 'vite'
 import type { MarkdownEnv, ResolvedOptions } from '../types'
 import { toArray, uniq } from '@antfu/utils'
-import { componentPlugin } from '@mdit-vue/plugin-component'
-import { frontmatterPlugin } from '@mdit-vue/plugin-frontmatter'
+import { componentPlugin } from '@mdit-vue-for-enhancer/plugin-component'
+import { frontmatterPlugin } from '@mdit-vue-for-enhancer/plugin-frontmatter'
 import { preprocessHead } from './head'
 
 const scriptSetupRE = /<\s*script([^>]*)\bsetup\b([^>]*)>([\s\S]*)<\/script>/g
@@ -64,9 +64,9 @@ export function createMarkdown(options: ResolvedOptions) {
   const isVue2 = options.vueVersion.startsWith('2.')
 
   const setupPromise = (async () => {
-    const { default: MarkdownIt } = await import('markdown-it-async')
+    const { MarkdownIt } = await import('markdown-it-enhancer')
 
-    const md = MarkdownIt({
+    const md = new MarkdownIt({
       html: true,
       linkify: true,
       typographer: true,
@@ -93,6 +93,8 @@ export function createMarkdown(options: ResolvedOptions) {
       md.use(plugin, options)
     })
 
+    await md.isReady()
+
     await options.markdownItSetup(md)
 
     return md
@@ -114,7 +116,7 @@ export function createMarkdown(options: ResolvedOptions) {
     raw = await transforms.before?.(raw, id) ?? raw
 
     const env: MarkdownEnv = { id }
-    let html = await md.renderAsync(raw, env)
+    let html = await md.render(raw, env)
     const { excerpt = '', frontmatter: data = null } = env
 
     if (wrapperDiv) {
