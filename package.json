@@ -1,7 +1,7 @@
 {
   "name": "unplugin-vue-markdown-for-enhancer",
   "type": "module",
-  "version": "29.2.0",
+  "version": "29.2.1",
   "packageManager": "pnpm@10.17.1",
   "description": "Compile Markdown to Vue component",
   "author": "Par9uet <par9uet@qq.com>",
