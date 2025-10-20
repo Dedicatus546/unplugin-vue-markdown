@@ -1,11 +1,11 @@
-import type { ComponentPluginOptions } from '@mdit-vue-for-enhancer/plugin-component'
-import type { FrontmatterPluginOptions } from '@mdit-vue-for-enhancer/plugin-frontmatter'
 import type {
   MarkdownIt,
   MarkdownItEnv,
   MarkdownItOptions,
   MarkdownItPlugin,
-} from 'markdown-it-enhancer'
+} from '@markdown-it-enhancer/core'
+import type { ComponentPluginOptions } from '@mdit-vue-for-enhancer/plugin-component'
+import type { FrontmatterPluginOptions } from '@mdit-vue-for-enhancer/plugin-frontmatter'
 import type { FilterPattern } from 'unplugin-utils'
 import type { preprocessHead } from './core/head'
 

@@ -8,18 +8,18 @@ importers:
 
   .:
     dependencies:
+      '@markdown-it-enhancer/core':
+        specifier: ^1.0.0
+        version: 1.0.0
       '@mdit-vue-for-enhancer/plugin-component':
-        specifier: ^3.0.2
-        version: 3.0.2(markdown-it-enhancer@15.1.0)
+        specifier: ^3.0.3
+        version: 3.0.3(@markdown-it-enhancer/core@1.0.0)
       '@mdit-vue-for-enhancer/plugin-frontmatter':
-        specifier: ^3.0.2
-        version: 3.0.2(markdown-it-enhancer@15.1.0)
+        specifier: ^3.0.3
+        version: 3.0.3(@markdown-it-enhancer/core@1.0.0)
       '@mdit-vue-for-enhancer/types':
-        specifier: ^3.0.2
-        version: 3.0.2
-      markdown-it-enhancer:
-        specifier: ^15.1.0
-        version: 15.1.0
+        specifier: ^3.0.3
+        version: 3.0.3
       unplugin:
         specifier: ^2.3.10
         version: 2.3.10
@@ -1126,20 +1126,48 @@ packages:
   '@leichtgewicht/ip-codec@2.0.4':
     resolution: {integrity: sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==}
 
-  '@mdit-vue-for-enhancer/plugin-component@3.0.2':
-    resolution: {integrity: sha512-pqXAhtNGUSVM62IoA/50Ae86Ar2LzWGf4yoeF4aiz0w4r/ClgaXmT9D9y4Ii5FItw5dYrMs/TgpTnWFPG+b7WA==}
+  '@markdown-it-enhancer/core@1.0.0':
+    resolution: {integrity: sha512-Mt6VwmpI+p3kWBishvEHKg3bpSW+UlzT6cLwUh0COr7AOcGNQAlbxaW1AtEH2dyytPRlMQi1EhvXO4Gz26B/vA==}
+    engines: {node: '>=20'}
+
+  '@markdown-it-enhancer/entities@1.0.0':
+    resolution: {integrity: sha512-kzeqnxQPoyWY9OXdHbEn93q6casaOQ+bwvzpjAc5+3N3H6ArecbVdSn2sy3U2qkrvVyllfsu9NPDKqLEM9+XpQ==}
+    engines: {node: '>=20'}
+
+  '@markdown-it-enhancer/linkify-it@1.0.0':
+    resolution: {integrity: sha512-rBTiAsToqFFN+Thh+/xtWavm3HKoYABOYVkJcud0ai3prGgc8s2wR+a/F596f1XMwi+JbyXkLwAQwe7bOlu5DQ==}
+    engines: {node: '>=20'}
+
+  '@markdown-it-enhancer/mdurl@1.0.0':
+    resolution: {integrity: sha512-wPvbN0qpQNNi7bzTyQRsPxUcI0CtqFaqLSG8/Cz/4pA4PCYXN0UMhjBKiLa2JV+HupnAp7EFJFzSEKZrGHsD8w==}
+    engines: {node: '>=20'}
+
+  '@markdown-it-enhancer/punycode.js@1.0.0':
+    resolution: {integrity: sha512-R1jWCgrkgs1OC2Tr7VRX+pfM7ei4FauyUvJRfQ7QXOAj0vNt3dKe5nI3aMiFJ02RF3Qrtrv2lYep+7QKulq1WQ==}
+    engines: {node: '>=20'}
+
+  '@markdown-it-enhancer/shared@1.0.0':
+    resolution: {integrity: sha512-pQInaxsWmBx7UaK8XIUCLjHv6ssOtnu9mF422q0q7WLaebpLJpefeikP4JbJkcFvIIqlYJ8M3gpEATQlYX3hGg==}
+    engines: {node: '>=20'}
+
+  '@markdown-it-enhancer/uc.micro@1.0.0':
+    resolution: {integrity: sha512-aHdAYlqsTnoWPV8VCaDndnh9moE+tDjQfqv3ieeqC2s6OPjyHrRNV5EuiWuRLxgfLPinI6YyzimqNx4IqcXQVw==}
+    engines: {node: '>=20'}
+
+  '@mdit-vue-for-enhancer/plugin-component@3.0.3':
+    resolution: {integrity: sha512-j/Vei2Cf4RDqzW9h/fUwR/Ao273Yc0vgSh1VGj8kkcqj5UwGBV2SKC2VXE1UYuOWMNwKX6P0ikNRIqoiownj3g==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
-      markdown-it-enhancer: ^15.1.0
+      '@markdown-it-enhancer/core': ^1.0.0
 
-  '@mdit-vue-for-enhancer/plugin-frontmatter@3.0.2':
-    resolution: {integrity: sha512-EsJUZaky6ESVyvlQ0nixCERIdnkqbDwSKVSxkTI7Wi2rPcRxvt9eEYojRH/YkrwI9EPkZOJYhd+BpB2Wz87LOw==}
+  '@mdit-vue-for-enhancer/plugin-frontmatter@3.0.3':
+    resolution: {integrity: sha512-syIssTV0cEmD4W89vvBeAhOPmSRZeXbuMaAR7dpP6NMxywnamLWVvYrLDM4etNgFdSaZSCwzRtFvA7NNMMIBQA==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
-      markdown-it-enhancer: ^15.1.0
+      '@markdown-it-enhancer/core': ^1.0.0
 
-  '@mdit-vue-for-enhancer/types@3.0.2':
-    resolution: {integrity: sha512-W+XirrpVmxjdPZJ6ZEqkchr6koSM0tBktY/23o/zzVECgRRH2SG9DWq293wo3Fj9g54Zl8+mvfjWphbghuZuNg==}
+  '@mdit-vue-for-enhancer/types@3.0.3':
+    resolution: {integrity: sha512-SERN5qCGAX1fxfwbadl+tj4NEpAag3CdQiKgqTMCShn5jT2YDc4WI6Zu+V4vpt4M20MlDee5hQwqBgPdjmF4bQ==}
     engines: {node: '>=20.0.0'}
 
   '@node-ipc/js-queue@2.0.3':
@@ -2693,10 +2721,6 @@ packages:
     resolution: {integrity: sha512-d4lC8xfavMeBjzGr2vECC3fsGXziXZQyJxD868h2M/mBI3PwAuODxAkLkq5HYuvrPYcUtiLzsTo8U3PgX3Ocww==}
     engines: {node: '>=10.13.0'}
 
-  entities-for-enhancer@6.0.0:
-    resolution: {integrity: sha512-GHijJmaocPF97XQU9IGXy50jbgZOjXFE0dAhHUIywT4vuFI/7Lv+fAb60fFGzd1vGBZ6KR5zlAhBPz9KbYvU8A==}
-    engines: {node: '>=20'}
-
   entities@2.2.0:
     resolution: {integrity: sha512-p92if5Nz619I0w+akJrLZH0MX0Pb5DX39XOwQTtXSdQQOaYH03S1uIQp4mhOZtAXrxq4ViO67YTiLBo2638o9A==}
 
@@ -3611,10 +3635,6 @@ packages:
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
 
-  linkify-it-for-enhancer@6.0.0:
-    resolution: {integrity: sha512-UtQCOrNcxikvCzNFYIYbjoMt/pIitc3DoP5ZZcfMRqOAFsfaspFiBaz/7BLaFTCBcQln2FvswEaEsHQQ38C5xw==}
-    engines: {node: '>=20'}
-
   load-tsconfig@0.2.5:
     resolution: {integrity: sha512-IXO6OCs9yg8tMKzfPZ1YmheJbZCiEsnBdcB03l0OcfK9prKnJb96siuHCr5Fl37/yo9DnKU+TLpxzTUspw9shg==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
@@ -3718,14 +3738,6 @@ packages:
     resolution: {integrity: sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==}
     engines: {node: '>=8'}
 
-  markdown-it-enhancer-utils@1.1.0:
-    resolution: {integrity: sha512-4CeJri3melCrHSE9dWoMW/K8KkPgmsRboCcjLsLyo9nsfTYYmkNXQSsPVTxx4M2JVHKu45uZM9+pnyUFNpGXtQ==}
-    engines: {node: '>=20'}
-
-  markdown-it-enhancer@15.1.0:
-    resolution: {integrity: sha512-Ll9PGFPdR2i12EqgW8HSp8iG/gzYpTPGY/u4i90J6w+QipocmxfHJo60DdibCO5lKnlVTCGD8a/ipgKtfa+BRA==}
-    engines: {node: '>=20'}
-
   markdown-it-prism@3.0.0:
     resolution: {integrity: sha512-M0LQsbVzjbzufV95nYdtbs99Sm/8f7zLnqFblb5yQZtFTGLM+y6hxMZ8BdujY3FFqVvTbnZ52/uoicQUqZUYbg==}
     engines: {node: '>=20.0.0'}
@@ -3771,10 +3783,6 @@ packages:
 
   mdn-data@2.0.14:
     resolution: {integrity: sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow==}
-
-  mdurl-for-enhancer@3.0.0:
-    resolution: {integrity: sha512-ulBfEL2Zad7xaZeRXKCrMq35ofQYP45mcxyp8Vg1quNMR0qOw9Knq8S2T8sPpTshV22/x1RKRAwK2slQnCW9dw==}
-    engines: {node: '>=20'}
 
   media-typer@0.3.0:
     resolution: {integrity: sha512-dq+qelQ9akHpcOl/gUVRTxVIOkAJ1wR3QAvb4RsVjS8oVoFjDGTc679wJYmUmknUF5HwMLOgb5O+a3KxfWapPQ==}
@@ -4549,10 +4557,6 @@ packages:
   pump@3.0.0:
     resolution: {integrity: sha512-LwZy+p3SFs1Pytd/jYct4wpv49HiYCqd9Rlc5ZVdk0V+8Yzv6jR5Blk3TRmPL1ft69TxP0IMZGJ+WPFU2BFhww==}
 
-  punycode.js-for-enhancer@3.0.0:
-    resolution: {integrity: sha512-PkHuYh8egEhlTVvapDYf436TSkyhtbAKkUFVOYw7yoDuzNLwm3LByhtOeQoyMookQMntRxSqtcA6h7EpBTvm3Q==}
-    engines: {node: '>=20'}
-
   punycode@2.3.1:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
@@ -5165,10 +5169,6 @@ packages:
     resolution: {integrity: sha512-CWBzXQrc/qOkhidw1OzBTQuYRbfyxDXJMVJ1XNwUHGROVmuaeiEm3OslpZ1RV96d7SKKjZKrSJu3+t/xlw3R9A==}
     engines: {node: '>=14.17'}
     hasBin: true
-
-  uc.micro-for-enhancer@3.0.0:
-    resolution: {integrity: sha512-NQtVr1RDWPr+A2uQ+PfursoMytfhlzA7Ss24hvARH11PtQEwHBQX1zzMAnZkTvJt+2c8K8rVjpobZ7G6X3yBuw==}
-    engines: {node: '>=20'}
 
   ufo@1.5.4:
     resolution: {integrity: sha512-UsUk3byDzKd04EyoZ7U4DOlxQaD14JUKQl6/P7wiX4FNvUfm3XL246n9W5AmqwW5RSFJ27NAuM0iLscAOYUiGQ==}
@@ -6709,17 +6709,46 @@ snapshots:
 
   '@leichtgewicht/ip-codec@2.0.4': {}
 
-  '@mdit-vue-for-enhancer/plugin-component@3.0.2(markdown-it-enhancer@15.1.0)':
+  '@markdown-it-enhancer/core@1.0.0':
     dependencies:
-      markdown-it-enhancer: 15.1.0
+      '@markdown-it-enhancer/entities': 1.0.0
+      '@markdown-it-enhancer/linkify-it': 1.0.0
+      '@markdown-it-enhancer/mdurl': 1.0.0
+      '@markdown-it-enhancer/punycode.js': 1.0.0
+      '@markdown-it-enhancer/shared': 1.0.0
+      '@markdown-it-enhancer/uc.micro': 1.0.0
 
-  '@mdit-vue-for-enhancer/plugin-frontmatter@3.0.2(markdown-it-enhancer@15.1.0)':
+  '@markdown-it-enhancer/entities@1.0.0': {}
+
+  '@markdown-it-enhancer/linkify-it@1.0.0':
     dependencies:
-      '@mdit-vue-for-enhancer/types': 3.0.2
+      '@markdown-it-enhancer/shared': 1.0.0
+      '@markdown-it-enhancer/uc.micro': 1.0.0
+
+  '@markdown-it-enhancer/mdurl@1.0.0': {}
+
+  '@markdown-it-enhancer/punycode.js@1.0.0': {}
+
+  '@markdown-it-enhancer/shared@1.0.0':
+    dependencies:
+      '@markdown-it-enhancer/entities': 1.0.0
+      '@markdown-it-enhancer/mdurl': 1.0.0
+      '@markdown-it-enhancer/punycode.js': 1.0.0
+      '@markdown-it-enhancer/uc.micro': 1.0.0
+
+  '@markdown-it-enhancer/uc.micro@1.0.0': {}
+
+  '@mdit-vue-for-enhancer/plugin-component@3.0.3(@markdown-it-enhancer/core@1.0.0)':
+    dependencies:
+      '@markdown-it-enhancer/core': 1.0.0
+
+  '@mdit-vue-for-enhancer/plugin-frontmatter@3.0.3(@markdown-it-enhancer/core@1.0.0)':
+    dependencies:
+      '@markdown-it-enhancer/core': 1.0.0
+      '@mdit-vue-for-enhancer/types': 3.0.3
       gray-matter: 4.0.3
-      markdown-it-enhancer: 15.1.0
 
-  '@mdit-vue-for-enhancer/types@3.0.2': {}
+  '@mdit-vue-for-enhancer/types@3.0.3': {}
 
   '@node-ipc/js-queue@2.0.3':
     dependencies:
@@ -8406,8 +8435,6 @@ snapshots:
       graceful-fs: 4.2.11
       tapable: 2.2.1
 
-  entities-for-enhancer@6.0.0: {}
-
   entities@2.2.0: {}
 
   entities@4.5.0: {}
@@ -9391,11 +9418,6 @@ snapshots:
 
   lines-and-columns@1.2.4: {}
 
-  linkify-it-for-enhancer@6.0.0:
-    dependencies:
-      markdown-it-enhancer-utils: 1.1.0
-      uc.micro-for-enhancer: 3.0.0
-
   load-tsconfig@0.2.5: {}
 
   loader-runner@4.3.0: {}
@@ -9497,16 +9519,6 @@ snapshots:
   make-dir@3.1.0:
     dependencies:
       semver: 6.3.1
-
-  markdown-it-enhancer-utils@1.1.0: {}
-
-  markdown-it-enhancer@15.1.0:
-    dependencies:
-      entities-for-enhancer: 6.0.0
-      linkify-it-for-enhancer: 6.0.0
-      mdurl-for-enhancer: 3.0.0
-      punycode.js-for-enhancer: 3.0.0
-      uc.micro-for-enhancer: 3.0.0
 
   markdown-it-prism@3.0.0:
     dependencies:
@@ -9628,8 +9640,6 @@ snapshots:
       '@types/mdast': 4.0.4
 
   mdn-data@2.0.14: {}
-
-  mdurl-for-enhancer@3.0.0: {}
 
   media-typer@0.3.0: {}
 
@@ -10448,8 +10458,6 @@ snapshots:
       end-of-stream: 1.4.4
       once: 1.4.0
 
-  punycode.js-for-enhancer@3.0.0: {}
-
   punycode@2.3.1: {}
 
   qs@6.11.0:
@@ -11109,8 +11117,6 @@ snapshots:
       mime-types: 2.1.35
 
   typescript@5.9.2: {}
-
-  uc.micro-for-enhancer@3.0.0: {}
 
   ufo@1.5.4: {}
 

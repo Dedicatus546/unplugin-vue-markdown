@@ -64,7 +64,7 @@ export function createMarkdown(options: ResolvedOptions) {
   const isVue2 = options.vueVersion.startsWith('2.')
 
   const setupPromise = (async () => {
-    const { MarkdownIt } = await import('markdown-it-enhancer')
+    const { MarkdownIt } = await import('@markdown-it-enhancer/core')
 
     const md = new MarkdownIt({
       html: true,
